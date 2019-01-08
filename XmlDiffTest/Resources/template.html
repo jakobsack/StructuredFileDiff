@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>XmlDiffTest</title>
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        table {
+            border-spacing: 0;
+            font-family: monospace;
+            width: 100%;
+            font-size: 1.1em;
+        }
+
+        td,
+        th {
+            padding: 0;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f1f4f2;
+        }
+
+        /* ................................................................ */
+        /* Chars .......................................................... */
+        /* ................................................................ */
+        /* .char-unchanged */
+
+        tbody .char-added {
+            background-color: #83c47e;
+        }
+
+        tbody tr:nth-child(even) .char-added {
+            background-color: #73b46e;
+        }
+
+        tbody .char-removed {
+            background-color: #c4847e;
+        }
+
+        tbody tr:nth-child(even) .char-removed {
+            background-color: #b4746e;
+        }
+
+        /* ................................................................ */
+        /* Lines .......................................................... */
+        /* ................................................................ */
+
+        /* .line-unchanged */
+
+        tbody .line-added .right {
+            background-color: #a3f49e;
+        }
+
+        tbody tr:nth-child(even).line-added .right {
+            background-color: #93e48e;
+        }
+
+        tbody .line-removed .left {
+            background-color: #f4a49e;
+        }
+
+        tbody tr:nth-child(even).line-removed .left {
+            background-color: #e4948e;
+        }
+
+        tbody .line-movedorigin .left {
+            background-color: #c4c4f4;
+        }
+
+        tbody tr:nth-child(even).line-movedorigin .left {
+            background-color: #b4b4e4;
+        }
+
+        tbody .line-moved .left {
+            background-color: #c4c4f4;
+        }
+
+        tbody tr:nth-child(even).line-moved .left {
+            background-color: #b4b4e4;
+        }
+
+        /* ................................................................ */
+        /* Blocks ......................................................... */
+        /* ................................................................ */
+        tbody .block {
+            padding-left: 20px;
+            padding-top: 0;
+        }
+
+        tbody .block .block .block {
+            border-left: 1px solid #ead4cf;
+        }
+
+        tbody .block-unchanged {
+            background-color: #ffffff;
+        }
+
+        tbody tr:nth-child(even) .block-unchanged {
+            background-color: #f1f4f2;
+        }
+
+        tbody .right .block-added {
+            background-color: #a3f49e;
+        }
+
+        tbody tr:nth-child(even) .right .block-added {
+            background-color: #93e48e;
+        }
+
+        tbody .left .block-removed {
+            background-color: #f4a49e;
+        }
+
+        tbody tr:nth-child(even) .left .block-removed {
+            background-color: #e4948e;
+        }
+
+        tbody .left .block-moved {
+            background-color: #c4c4f4;
+        }
+
+        tbody tr:nth-child(even) .left .block-moved {
+            background-color: #b4b4e4;
+        }
+
+        tbody .left .block-movedorigin {
+            background-color: #c4c4f4;
+        }
+
+        tbody tr:nth-child(even) .left .block-movedorigin {
+            background-color: #b4b4e4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Settingscomparer</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Left</th>
+                <th>Right</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ table_content }}
+        </tbody>
+    </table>
+</body>
+
+</html>
