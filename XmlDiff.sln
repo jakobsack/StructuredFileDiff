@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDiffLib", "XmlDiffLib\XmlDiffLib.csproj", "{FB63D432-EE85-47DE-B2BC-E22E90933CE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDiffLib", "XmlDiffLib\XmlDiffLib.csproj", "{FB63D432-EE85-47DE-B2BC-E22E90933CE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDiffTest", "XmlDiffTest\XmlDiffTest.csproj", "{B7E440B6-E960-4472-AFA3-5DA547855317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDiffTest", "XmlDiffTest\XmlDiffTest.csproj", "{B7E440B6-E960-4472-AFA3-5DA547855317}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeDiffLib", "SettingsDiff\SettingsDiff.csproj", "{C86D9A33-216C-4634-83E3-0968CF9A8859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SettingsDiff", "SettingsDiff\SettingsDiff.csproj", "{C86D9A33-216C-4634-83E3-0968CF9A8859}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextDiff", "TextDiff\TextDiff.csproj", "{CC0B1F93-3396-4374-83E1-EDD0E8321055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextDiff", "TextDiff\TextDiff.csproj", "{CC0B1F93-3396-4374-83E1-EDD0E8321055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuredFileGui", "StructuredFileGui\StructuredFileGui.csproj", "{21318525-1833-41BC-994C-A820E5E05B04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FB63D432-EE85-47DE-B2BC-E22E90933CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{CC0B1F93-3396-4374-83E1-EDD0E8321055}.Release|x64.Build.0 = Release|Any CPU
 		{CC0B1F93-3396-4374-83E1-EDD0E8321055}.Release|x86.ActiveCfg = Release|Any CPU
 		{CC0B1F93-3396-4374-83E1-EDD0E8321055}.Release|x86.Build.0 = Release|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Debug|x64.Build.0 = Debug|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Debug|x86.Build.0 = Debug|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Release|x64.ActiveCfg = Release|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Release|x64.Build.0 = Release|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Release|x86.ActiveCfg = Release|Any CPU
+		{21318525-1833-41BC-994C-A820E5E05B04}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0450D91D-8A78-4D22-9D03-AF91D5C08B33}
 	EndGlobalSection
 EndGlobal
