@@ -15,8 +15,8 @@ namespace XmlDiffTest
     {
         static void Main(string[] args)
         {
-            ComparableXmlFile originalFile = new ComparableXmlFile("/home/jakob/tmp/a.xml");
-            ComparableXmlFile changedFile = new ComparableXmlFile("/home/jakob/tmp/b.xml");
+            ComparableXmlFile originalFile = new ComparableXmlFile(args[0]);
+            ComparableXmlFile changedFile = new ComparableXmlFile(args[1]);
 
             Block diff = originalFile.DiffWith(changedFile);
 
@@ -33,7 +33,7 @@ namespace XmlDiffTest
             {
                 tableContent = tableContent,
             });
-            File.WriteAllText("/home/jakob/tmp/diff.html", output);
+            Console.WriteLine(output);
         }
 
         private static string ReadResource(Assembly assembly, string resourceName)
