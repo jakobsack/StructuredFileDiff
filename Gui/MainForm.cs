@@ -57,49 +57,47 @@ namespace StructuredFileDiff.Gui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result != DialogResult.OK)
-            {
-                return;
-            }
-
-            textBox1.Text = openFileDialog1.FileName;
-
-            try
-            {
-                leftFile = new ComparableXmlFile(textBox1.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Ups");
-            }
-
-            RenderFiles();
+			OpenFile(openFileDialog1, textBox1, ref leftFile);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+		private void openLeftFileToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			OpenFile(openFileDialog1, textBox1, ref leftFile);
+		}
+
+		private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result != DialogResult.OK)
-            {
-                return;
-            }
-
-            textBox2.Text = openFileDialog1.FileName;
-
-            try
-            {
-                rightFile = new ComparableXmlFile(textBox2.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Ups");
-            }
-
-            RenderFiles();
+			OpenFile(openFileDialog1, textBox2, ref rightFile);
         }
 
-        private void RenderFiles()
+		private void openRightFileToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			OpenFile(openFileDialog1, textBox2, ref rightFile);
+		}
+
+		private void OpenFile(OpenFileDialog dialog, TextBox textBoxPath, ref ComparableXmlFile file)
+		{
+			DialogResult result = dialog.ShowDialog();
+			if (result != DialogResult.OK)
+			{
+				return;
+			}
+
+			textBoxPath.Text = dialog.FileName;
+
+			try
+			{
+				file = new ComparableXmlFile(textBoxPath.Text);
+			}
+			catch
+			{
+				MessageBox.Show(string.Format("Could not load file {0}", textBoxPath.Text));
+			}
+
+			RenderFiles();
+		}
+
+		private void RenderFiles()
         {
             if (leftFile == null && rightFile == null)
             {
@@ -335,5 +333,5 @@ namespace StructuredFileDiff.Gui
             panelLeft.Height = splitContainer1.Panel1.Height - 32;
             panelRight.Height = splitContainer1.Panel2.Height - 32;
         }
-    }
+	}
 }
